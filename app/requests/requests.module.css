@@ -1,9 +1,5 @@
 
 
-
-
-
-
 .main-card__main-card-header {
     display: flex;
     justify-content: space-between;
@@ -219,4 +215,80 @@
 
 .tpn-btn--back {
     color: #646464;
+}
+
+
+/* REQUEST LINK OVERLAY */
+.main__requst-link-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.requst-link-overlay--active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.requst-link-overlay__requset-link-div {
+    background-color: #fff;
+    padding: 2em;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.requset-link-div__x {
+    position: absolute;
+    top: .5em;
+    right: .7em;
+    font-size: 24px;
+    color: #1644cc;
+    cursor: pointer;
+}
+
+.requset-link-div__a {
+    display: block;
+    margin-bottom: 1.5em;
+    color: #1644cc;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.approve-reject-btns__btn {
+    padding: .8em 1.8em;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: .5em;
+}
+
+.approve-reject-btns__btn--approve {
+    background-color: #90ee90b2;
+    color: #21a821;
+}
+
+.approve-reject-btns__btn--reject {
+    background-color: #ffcccbb2;
+    color: #af4a48;
 }
