@@ -1,8 +1,21 @@
+"use client";
+
+import { useState } from "react";
+import LoginPage from "./login/page";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  
+    const handleLogin = () => {
+      // You can later validate credentials before setting true
+      setIsLoggedIn(true);
+    };
+
+
   return (
      <html lang="en">
+      {isLoggedIn ? (
       <body className="body">
         <div className="sidebar">
           <h2 className="sidebar__h2">VVMU Panel</h2>
@@ -14,6 +27,9 @@ export default function RootLayout({ children }) {
           {children} {/* this is where each page gets injected */}
         </main>
       </body>
+      ) : (
+        <LoginPage onLogin={handleLogin} />
+      )}
     </html>
   );
 }

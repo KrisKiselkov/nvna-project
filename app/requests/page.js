@@ -2,7 +2,7 @@
 
 import styles from './requests.module.css';
 import { requestData } from './requestData';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 
@@ -29,6 +29,17 @@ export default function RequestsPage() {
     
     // State to hold the request data
     const [ requestDataState, setRequestDataState ] = useState(requestData);
+
+    useEffect(() => {
+    fetch('https://script.google.com/macros/s/AKfycby71-AYib-ZhJZ6qB3GpqfdkJJYIN1ng4a6oAZO3eEA-RlEN7BSGRffFymn51Erdwjt/exec')
+        .then(res => res.json())
+        .then(data => {
+            console.log("Fetched data:", data);
+            setRequestDataState(data);
+        })
+        .catch(error => console.error("Error fetching data:", error));
+}, []);
+
     
     const filteredRequests = requestDataState.filter(request => {
         if (filter === "Отпуски" || filter === "Командировки") {
