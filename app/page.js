@@ -1,6 +1,6 @@
 "use client";
 
-import ReqestsPage from "./requests/page";
+import ReqestsPage from "./admin/requests/page";
 
 
 export default function Home() {

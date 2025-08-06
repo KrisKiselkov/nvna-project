@@ -1,5 +1,14 @@
 
 
+.main__loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  color: #333;
+}
+
 .main-card__main-card-header {
     display: flex;
     justify-content: space-between;

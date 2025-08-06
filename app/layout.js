@@ -5,7 +5,7 @@ import LoginPage from "./login/page";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   
     const handleLogin = () => {
       // You can later validate credentials before setting true

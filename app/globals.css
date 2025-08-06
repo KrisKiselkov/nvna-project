@@ -17,9 +17,10 @@
 }
 
 .sidebar {
-    width: 14.3vw;
+    width: 16vw;
     border-right: 1px solid #ccc;
     padding: 2em;
+    color: #1644cc;
 }
 
 .sidebar__h2 {
@@ -27,7 +28,8 @@
 }
 
 .sidebar__nav-link {
-    color: #181818;
+    color: #1644cc;
+    font-weight: 500;
     display: block;
     margin-bottom: .8em;
     text-decoration: none;
