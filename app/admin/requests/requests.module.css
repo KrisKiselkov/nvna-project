@@ -40,7 +40,7 @@
 .main-card__main-card-body {
     background-color: #f7f7f7;
     padding: 1.7em;
-
+    height: 100%;
 }
 
 .main-card-body__body-sel-doc {
@@ -65,6 +65,10 @@
     font-size: 16px;
     border-radius: 4px;
     border: 1px solid #ccc;
+}
+
+.body-sel-doc__sel-doc:focus {
+    outline: none;
 }
 
 .main-card-body__body-all-details {
