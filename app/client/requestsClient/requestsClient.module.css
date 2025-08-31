@@ -54,11 +54,10 @@
 
 .mrc-body__days-off-new-request {
     background-color: #fff;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     padding: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-bottom: 1px solid #ccc;
     margin-bottom: 2.5em;
     display: flex;
     justify-content: space-between;
@@ -100,7 +99,7 @@
     border-radius: 4px;
     width: 90%;
     margin: 0 auto;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
 }
 
 .user-dashboard__user-db-req {
@@ -112,6 +111,17 @@
     flex-wrap: wrap;
     background-color: #fff;
     padding: 1.3em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.user-db-req__user-db-main-div {
+    width: 100%;
+    height: fit-content;
+    max-height: 23.1em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-content: space-between;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -129,7 +139,7 @@
     padding: .7em;
     border-bottom: 1px solid #ccc;
     text-align: center;
-    font-size: 20px;
+    font-size: 19px;
     margin: 0;
     color: #fff;
 }
@@ -139,6 +149,10 @@
     align-items: center;
     padding: 1em;
     border-bottom: 1px solid #ccc;
+}
+
+.user-db-divs__tasks-div:last-child {
+    border-bottom: none;
 }
 
 .tasks-div__task-end-date-div {
