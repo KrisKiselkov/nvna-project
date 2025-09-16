@@ -20,8 +20,8 @@ export default function RootLayout({ children }) {
       <body className="body">
         <div className="sidebar">
           <h2 className="sidebar__h2">VVMU Panel</h2>
-          <Link href="/admin/requests" className="sidebar__nav-link">Заявки</Link>
-          <Link href="/client/requestsClient" className="sidebar__nav-link">Approved</Link>
+          <Link href="/admin/requests" className="sidebar__nav-link">Администатор</Link>
+          <Link href="/client/requestsClient" className="sidebar__nav-link">Потребител</Link>
           <a href="#" className="sidebar__nav-link">Settings</a>
         </div>
         <main className="main">

@@ -2,12 +2,22 @@
 
 import styles from './requestsClient.module.css';
 import { useState } from 'react';
+import RequestForm from './requestForm';
 import { mockTasks } from './requestClientData';
 
 
 export default function RequestsClient () {
     const [ mockedTasks, setMockedTasks ] = useState(mockTasks);
 
+    const [ formOpen, setFormOpen ] = useState(false);
+    console.log(formOpen);
+    const handleFormOpen = () => {
+        setFormOpen(true);
+    }
+
+    const handleFormClose = () => {
+        setFormOpen(false);
+    }
 
     const [taskDone, setTaskDone] = useState(
         mockedTasks.map(task => task.status === "done")
@@ -100,7 +110,7 @@ export default function RequestsClient () {
                     <p className={styles["days-off__p"]}>оставащи дни<br />отпуск</p>
                     </div>
                     <div className={styles["days-off-new-request__new-request"]}>
-                    <button className={styles["new-request__button"]}>Нова заявка</button>
+                    <button className={styles["new-request__button"]} onClick={handleFormOpen}>Нова заявка</button>
                     </div>
                 </div>
                 </div>
@@ -108,6 +118,10 @@ export default function RequestsClient () {
             </div>
             </div>    
         </div>
+        { formOpen ?
+            <RequestForm formOpen={handleFormClose}/>
+            : null
+        }
         </div>
     );
 }
